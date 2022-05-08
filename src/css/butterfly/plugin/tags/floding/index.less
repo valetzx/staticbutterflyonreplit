@@ -1,0 +1,146 @@
+// details
+details {
+  display: block;
+  padding: 16px;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  font-size: 0.7375rem;
+  transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  border: 1px solid #f6f6f6;
+  line-height: 1.3;
+  summary {
+    cursor: pointer;
+    padding: 16px;
+    margin: -16px;
+    border-radius: 4px;
+    color: rgba(85, 85, 85, 0.7);
+    font-size: 0.775rem;
+    font-weight: 700;
+    position: relative;
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6,
+    > p {
+      display: inline;
+      border-bottom: none;
+    }
+    &:hover {
+      color: #555555;
+      &:after {
+        position: absolute;
+        content: '';
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+      }
+    }
+  }
+  > summary {
+    background: #f6f6f6;
+  }
+  &[blue] {
+    border-color: #e8f4fd;
+    > summary {
+      background: #e8f4fd;
+    }
+  }
+  &[cyan] {
+    border-color: #e8fafe;
+    > summary {
+      background: #e8fafe;
+    }
+  }
+  &[green] {
+    border-color: #ebf9ed;
+    > summary {
+      background: #ebf9ed;
+    }
+  }
+  &[yellow] {
+    border-color: #fff8e9;
+    > summary {
+      background: #fff8e9;
+    }
+  }
+  &[red] {
+    border-color: #feefee;
+    > summary {
+      background: #feefee;
+    }
+  }
+  &[open] {
+    border-color: rgba(85, 85, 85, 0.2);
+    > summary {
+      border-bottom: 1px solid rgba(85, 85, 85, 0.2);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      &:hover:after {
+        content: '-';
+      }
+    }
+    &[blue] {
+      border-color: rgba(33, 150, 243, 0.3);
+      > summary {
+        border-bottom-color: rgba(33, 150, 243, 0.3);
+      }
+    }
+    &[cyan] {
+      border-color: rgba(27, 205, 252, 0.3);
+      > summary {
+        border-bottom-color: rgba(27, 205, 252, 0.3);
+      }
+    }
+    &[green] {
+      border-color: rgba(61, 197, 80, 0.3);
+      > summary {
+        border-bottom-color: rgba(61, 197, 80, 0.3);
+      }
+    }
+    &[yellow] {
+      border-color: rgba(255, 189, 43, 0.3);
+      > summary {
+        border-bottom-color: rgba(255, 189, 43, 0.3);
+      }
+    }
+    &[red] {
+      border-color: rgba(254, 95, 88, 0.3);
+      > summary {
+        border-bottom-color: rgba(254, 95, 88, 0.3);
+      }
+    }
+    > summary {
+      color: #555555;
+      margin-bottom: 0;
+    }
+    > div.content {
+      padding: 16px;
+      margin: -16px;
+      margin-top: 0;
+      > .fancybox:first-child,
+      > .highlight:first-child,
+      > .snote:first-child,
+      > .tabs:first-child,
+      > ol:first-child,
+      > p:first-child,
+      > ul:first-child {
+        margin-top: 0;
+      }
+      > .fancybox:last-child,
+      > .highlight:last-child,
+      > .snote:last-child,
+      > .tabs:last-child,
+      > ol:last-child,
+      > p:last-child,
+      > ul:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - '14'
+
+sudo: required
+
+# Travis-CI Caching
+cache:
+  yarn: true
+
+# S: Build Lifecycle
+install:
+  - yarn install
+
+script:
+  - yarn build
+  - cp ./dist/css/index.*.css ./dist/css/index.min.css
+  - cp ./dist/css/font.*.css ./dist/css/font.min.css
+  - npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}
+  - npm publish
+  - curl https://purge.jsdelivr.net/npm/static-butterfly@latest/dist/css/index.min.css
+  - curl https://purge.jsdelivr.net/npm/static-butterfly@latest/dist/css/font.min.css

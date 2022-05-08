@@ -1,0 +1,55 @@
+/*
+ * @description: 标签外挂相关
+ */
+
+// 隐藏内容 按钮
+.hide-block,
+.hide-inline {
+  > .hide-button.open {
+    display: block;
+  }
+}
+
+p,
+span {
+  &.red {
+    --Color: rgb(233, 30, 100);
+    --ColorA: rgba(233, 30, 100, 0.2);
+  }
+  &.green {
+    --Color: rgb(139, 195, 74);
+    --ColorA: rgba(139, 195, 74, 0.2);
+  }
+  &.blue {
+    --Color: rgb(3, 169, 244);
+    --ColorA: rgba(3, 169, 244, 0.2);
+  }
+  &.yellow {
+    --Color: rgb(255, 193, 7);
+    --ColorA: rgba(255, 193, 7, 0.2);
+  }
+  &.grey {
+    --Color: rgb(76, 76, 76);
+    --ColorA: rgba(76, 76, 76, 0.2);
+  }
+}
+
+// 标签fontawsome5图标
+.font5 {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+  line-height: 32px;
+  border-left-color: #767676;
+  background: #f6f6f6;
+}
+@import './inline-tags/index.less';
+@import './border/index.less';
+@import './link-card/index.less';
+@import './checkbox/index.less';
+@import './rich-btn/index.less';
+@import './floding/index.less';
+@import './fancybox/index.less';
+@import './snote/index.less';
+@import './tip/index.less';

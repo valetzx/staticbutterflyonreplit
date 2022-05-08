@@ -1,0 +1,118 @@
+// link标签
+#post {
+  // link标签
+  a.link-card {
+    text-decoration: none;
+    margin: 0.2rem auto;
+    background: var(--tab-botton-bg);
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.575rem;
+    min-width: 200px;
+    max-width: 361px;
+    color: var(--tab-botton-color);
+    border-radius: 8px;
+    &:hover {
+      box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.1);
+    }
+    @media screen and (max-width: 425px) {
+      max-width: 100%;
+    }
+    @media screen and (max-width: 375px) {
+      width: 100%;
+    }
+    div.left,
+    div.right {
+      pointer-events: none;
+    }
+    div.left {
+      width: 48px;
+      height: 48px;
+      margin: 12px;
+      overflow: hidden;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      position: relative;
+      i {
+        font-size: 32px;
+        line-height: 48px;
+        margin-left: 4px;
+      }
+      img {
+        display: block;
+        position: absolute;
+        border-radius: 8px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    div.right {
+      overflow: hidden;
+      margin-right: 12px;
+    }
+    p {
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &.text {
+        font-weight: bold;
+      }
+      &.url {
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        color: var(--search-input-color);
+        font-size: 0.7125rem;
+      }
+    }
+  }
+  // 行内小标签
+  s,
+  del {
+    color: #999;
+    -webkit-text-decoration-color: #999;
+    text-decoration-color: #999;
+  }
+  u {
+    color: #444;
+    text-decoration: none;
+    border-bottom: 1px solid #fe5f58;
+  }
+  emp {
+    color: #444;
+    border-bottom: 4px dotted #fe5f58;
+  }
+  wavy {
+    color: #444;
+    -webkit-text-decoration-style: wavy;
+    text-decoration-style: wavy;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    -webkit-text-decoration-color: #fe5f58;
+    text-decoration-color: #fe5f58;
+  }
+  psw {
+    color: transparent;
+    background: #7f7f7f;
+    border-radius: 2px;
+    transition: all 0.28s ease;
+    &:hover {
+      color: #555;
+      background: none;
+    }
+  }
+  kbd {
+    color: var(--tab-botton-color);
+    border-radius: 4px;
+    border: 1px solid #d2d2d2;
+    border-bottom-width: 2px;
+    background: var(--tab-button-active-bg);
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}

@@ -1,0 +1,99 @@
+/*
+ * @description: 页面相关美化
+ */
+#web_bg {
+  background: linear-gradient(
+    90deg,
+    rgba(247, 149, 51, 0.1) 0,
+    rgba(243, 112, 85, 0.1) 15%,
+    rgba(239, 78, 123, 0.1) 30%,
+    rgba(161, 102, 171, 0.1) 44%,
+    rgba(80, 115, 184, 0.1) 58%,
+    rgba(16, 152, 173, 0.1) 72%,
+    rgba(7, 179, 155, 0.1) 86%,
+    rgba(109, 186, 130, 0.1) 100%
+  );
+}
+
+// 滚动条
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #49b1f5;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #49b1f5;
+}
+#recent-posts {
+  > .recent-post-item {
+    background: var(--light_page_color);
+  }
+}
+.layout_post {
+  > #page {
+    background: var(--light_page_color);
+  }
+}
+.layout {
+  > div {
+    &:first-child:not(.recent-posts) {
+      background: var(--light_page_color);
+    }
+  }
+}
+.layout_post,
+.read-mode .layout_post {
+  > #post {
+    background: var(--light_page_color);
+  }
+}
+
+// 夜间模式
+[data-theme='dark'] #recent-posts {
+  > .recent-post-item {
+    background: var(--dark_page_color);
+  }
+}
+[data-theme='dark'] .layout_post {
+  > #page {
+    background: var(--dark_page_color);
+  }
+}
+[data-theme='dark'] .layout {
+  > div {
+    &:first-child:not(.recent-posts) {
+      background: var(--dark_page_color);
+    }
+  }
+}
+[data-theme='dark'] .layout_post,
+[data-theme='dark'] .read-mode .layout_post {
+  > #post {
+    background: var(--dark_page_color);
+  }
+}
