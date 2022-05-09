@@ -1,6 +1,8 @@
 ## 说明
 此仓库为[小康博客](https://www.antmoe.com/)魔改样式仓库.
+
  原版 ^ 
+ 
 ## 使用
 下载此仓库到本地
 在Replit部署：
@@ -29,7 +31,17 @@
     
 3. 运行命令`npm run build`
     此时，就会在多出一个`dist`目录，里面就是构建出来的样式文件。
+    
 ## 其他
 ~~`./src/css/config.less`文件为配置文件，部分设置可以直接通过设置进行修改。~~
 
 原作者没更新，正在探索。
+
+注入主题请在 butterfly 的 `_config.butterfly.yml` 寻找 `# Inject` 项目插入：
+
+```
+  head:
+     - <link rel="stylesheet" href="https://theme.pigp.repl.co/css/index.acfdffc3.css">
+```
+
+
